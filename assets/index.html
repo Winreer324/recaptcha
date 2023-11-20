@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>reCAPTCHA</title>
+    <!-- v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- v3 -->
+    <!--    <head>-->
+    <!--        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeS_BQpAAAAACLkGLBXzEqrKlf_VHMKcoTb_Mij" async defer></script>-->
+    <!--        &lt;!&ndash; Your code &ndash;&gt;-->
+    <!--    </head>-->
+</head>
+<body>
+<!-- v2 -->
+<form action="?" method="POST">
+    <div class="g-recaptcha"
+         data-sitekey="6LfkdxUpAAAAADRMqGw36jexyLECjsRaDTFnmf_f"
+         data-callback="captchaCallback"></div>
+
+</form>
+<script>
+      function captchaCallback(response){
+        //console.log(response);
+        if(typeof Captcha!=="undefined"){
+          Captcha.postMessage(response);
+        }
+      }
+
+</script>
+
+<!-- v3 -->
+<!--<script>-->
+<!--  function onClick(e) {-->
+<!--    e.preventDefault();-->
+<!--    grecaptcha.enterprise.ready(async () => {-->
+<!--      const token = await grecaptcha.enterprise.execute('6LeS_BQpAAAAACLkGLBXzEqrKlf_VHMKcoTb_Mij', {action: 'LOGIN'});-->
+<!--    });-->
+<!--  }-->
+<!--</script>-->
+</body>
+</html>
