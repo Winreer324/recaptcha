@@ -11,19 +11,19 @@ class WebViewPlusExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: WebViewPlusExampleMainPage(),
+      home: ExamplePage(),
     );
   }
 }
 
-class WebViewPlusExampleMainPage extends StatefulWidget {
-  const WebViewPlusExampleMainPage({Key? key}) : super(key: key);
+class ExamplePage extends StatefulWidget {
+  const ExamplePage({Key? key}) : super(key: key);
 
   @override
-  _WebViewPlusExampleMainPageState createState() => _WebViewPlusExampleMainPageState();
+  _ExamplePageState createState() => _ExamplePageState();
 }
 
-class _WebViewPlusExampleMainPageState extends State<WebViewPlusExampleMainPage> {
+class _ExamplePageState extends State<ExamplePage> {
   WebViewPlusController? _controller;
   double _height = 1;
 
@@ -31,7 +31,7 @@ class _WebViewPlusExampleMainPageState extends State<WebViewPlusExampleMainPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('webview_flutter_plus Example'),
+        title: const Text('Example'),
       ),
       body: ListView(
         shrinkWrap: true,
